@@ -1,12 +1,11 @@
 import { createStore, applyMiddleware } from "redux";
 import counterReducer from "./reducer";
+import { logger, delayMiddleware } from "./middleware";
 
 //custom middleware
-const loggerMiddleware = (store) => (next) => (action) => {
-  console.log("Middleware Intercepted:", action);
 
-  next(action);
-};
-
-const store = createStore(counterReducer, applyMiddleware(loggerMiddleware));
+const store = createStore(
+  counterReducer,
+  applyMiddleware(logger, delayMiddleware),
+);
 export default store;

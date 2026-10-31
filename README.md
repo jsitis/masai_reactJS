@@ -1,1 +1,1 @@
-**Some codes I wrote while learning reactJS**
+**Some codes I wrote while learning react**

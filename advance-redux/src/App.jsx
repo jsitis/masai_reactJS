@@ -1,11 +1,12 @@
-import React from "react"
-import "./App.css"
+import React from "react";
+import "./App.css";
+import DataFetcher from "./components/DataFetcher";
 function App() {
   return (
     <>
-      <h2>Hello World</h2>
+      <DataFetcher/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

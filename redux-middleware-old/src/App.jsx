@@ -1,14 +1,20 @@
-import { useState } from 'react'
-import './App.css'
+import "./App.css";
+import ClickButton from "./components/ClickButton";
+import { increment } from "./redux/action";
+import store from "./redux/store";
 
 function App() {
-  const [count, setCount] = useState(0)
+  console.log("initial state:", store.getState());
+
+  store.dispatch(increment());
+
+  console.log("Updated State:", store.getState());
 
   return (
     <>
-      
+      <ClickButton />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
